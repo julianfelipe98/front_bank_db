@@ -1,0 +1,44 @@
+.confirm-btn{
+    background-color:#66bb6a ;
+    color: azure;
+    width: 10rem;
+    
+    align-self:center;
+
+}
+.div-title{
+    border-bottom: 2px solid #a78951;
+    margin: 1rem 3rem;
+}
+.form-user-register{
+    border: 1px solid #212;
+    border-radius: 3px;
+    margin: 5rem 20rem;
+    padding: 3rem 2rem;
+    
+}
+.data-form{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+.div-create-btn{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+mat-form-field{
+    padding: 1rem;
+}
+
+.title1{
+    font-size: xx-large;
+    text-align: center;
+    margin: 2rem;
+
+}
+
+mat-form-field{
+    width: 100%;
+}

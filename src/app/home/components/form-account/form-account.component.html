@@ -1,0 +1,39 @@
+<div class="div-title">
+  <h1 class="title1">Account register form</h1>
+</div>
+<form class="form-user-register">
+  <div class="data-form">
+    <mat-form-field appearance="fill">
+      <mat-label>Customer Id</mat-label>
+      <input matInput placeholder="1049652888" name="customer_id" [(ngModel)]="accountData.customerId"/>
+      <mat-icon matSuffix>perm_identity</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Account type</mat-label>
+      <mat-select [(ngModel)]="accountData.accountType" name="account_type">
+        <mat-option value="PR">Premium</mat-option>
+        <mat-option value="RG">Regular</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="data-form">
+    <mat-form-field appearance="fill">
+      <mat-label>Coin</mat-label>
+      <input matInput placeholder="USD" name="coin" [(ngModel)]="accountData.coin"/>
+      <mat-icon matSuffix>monetization_on</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Mode of use</mat-label>
+      <mat-select name="mode_of_use" [(ngModel)]="accountData.mode_of_use">
+        <mat-option value="DC">Debit card</mat-option>
+        <mat-option value="CH">checkbook</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="div-create-btn">
+    <button (click)="createAccount()" mat-raised-button class="confirm-btn">Create</button>
+  </div>
+</form>

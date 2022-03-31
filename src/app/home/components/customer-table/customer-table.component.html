@@ -1,0 +1,64 @@
+<div class="div-title">
+  <h1 class="table-users-title">Customer</h1>
+</div>
+<div class="table-user">
+  <mat-form-field appearance="standard" class="filter">
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+    </mat-form-field>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="First name">
+        <th mat-header-cell *matHeaderCellDef> First Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.firstName}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Last name">
+          <th mat-header-cell *matHeaderCellDef> Last Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.lastName}}</td>
+        </ng-container>
+
+      <!-- doctype Column -->
+      <ng-container matColumnDef="Document type">
+        <th mat-header-cell *matHeaderCellDef> Doc type </th>
+        <td mat-cell *matCellDef="let element"> {{element.documentType}} </td>
+      </ng-container>
+
+      <!-- id Column -->
+      <ng-container matColumnDef="Id">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <!-- neighboorhood Column -->
+
+      <ng-container matColumnDef="Neighboorhod">
+          <th mat-header-cell *matHeaderCellDef> Neighboorhood </th>
+          <td mat-cell *matCellDef="let element"> {{element.neighboorhood}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Associated">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center">
+          Associated
+        </th>
+        <td mat-cell *matCellDef="let element" style="text-align: center">
+          <a (click)="openDialog(element)" [routerLink]="[]">
+            <mat-icon>person_add</mat-icon>
+          </a>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      <!-- Row shown when there is no matching data. -->
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+      </tr>
+    </table>
+
+</div>
+
+

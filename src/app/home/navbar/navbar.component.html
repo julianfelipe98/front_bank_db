@@ -1,0 +1,38 @@
+<mat-sidenav-container class="main-container" fullscreen>
+    <mat-sidenav mode="side" opened class="sidenav">
+      <mat-toolbar color="accent" class="navbar logo-nav">
+  
+          <a routerLink="/dashboard" style="text-align: center;">
+              <img src="../../assets/img/bank.svg "alt="" id="logo">
+          </a>
+          <p id="bank-name">My bank</p>
+      </mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item (click)="onClickRegister()">
+            <mat-icon matListIcon>add_circle_outline</mat-icon>
+            <span matLine>Register</span>
+        </a>
+  
+        <mat-list-item (click)="onClickUpdate()">
+            <mat-icon matListIcon>update</mat-icon>
+            <span matLine>Update</span>
+        </mat-list-item>
+  
+        <a mat-list-item (click)="onClickShow()">
+            <mat-icon matListIcon>visibility</mat-icon>
+            <span matLine>Show</span>
+        </a>
+  
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <mat-toolbar color="accent" class="navbar">
+          <a [routerLink]="['/customer/show']" class="link-nav">Customer</a>
+          <a [routerLink]="['/account/show']" class="link-nav">Account </a>
+          <a [routerLink]="['/transfer/show']" class="link-nav">Transaction</a>
+  
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

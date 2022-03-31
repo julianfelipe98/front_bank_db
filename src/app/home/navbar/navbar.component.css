@@ -1,0 +1,29 @@
+.navbar{
+    display: flex;
+    background-color: #212121;
+    justify-content: center;
+    height: 5rem;
+  }
+  .sidenav{
+    width: 20rem;
+  }
+  .links{
+    justify-content: space-between;
+  }
+  .link-nav{
+    text-decoration: none;
+    padding-left: 4rem;
+    color: azure;
+    justify-self: end;
+  }
+  #logo{
+    width: 3rem;
+  }
+  #bank-name{
+    padding-left: 0.5rem;
+  
+  }
+  .logo-nav{
+    padding: auto;
+  
+  }

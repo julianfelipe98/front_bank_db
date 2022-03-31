@@ -1,0 +1,47 @@
+<h1 class="transfer-title" mat-dialog-title>Created Associated</h1>
+<hr>
+<form [formGroup]="associatedForm" class="form-user-register">
+  <div class="data-form">
+    <div class="data-form">
+        <mat-form-field appearance="fill" class="padding-input">
+          <mat-label>First name</mat-label>
+          <input formControlName="firstName" matInput placeholder="Julian" />
+          <mat-icon matSuffix>badge</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="padding-input">
+          <mat-label>Last name</mat-label>
+          <input formControlName="lastName" matInput placeholder="Castellanos" />
+          <mat-icon matSuffix>drive_file_rename_outline</mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="data-form">
+
+        <mat-form-field appearance="fill" class="padding-input">
+          <mat-label>Document type</mat-label>
+          <mat-select formControlName="documentType">
+            <mat-option value="CC">CC</mat-option>
+            <mat-option value="TI">TI</mat-option>
+            <mat-option value="PPT">PPT</mat-option>
+            <mat-option value="CE">CE</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="padding-input">
+          <mat-label>Id</mat-label>
+          <input formControlName="id" matInput placeholder="1049652888" />
+          <mat-icon matSuffix>perm_identity</mat-icon>
+        </mat-form-field>
+      </div>
+    <mat-form-field appearance="fill">
+      <mat-label>Account number</mat-label>
+      <input formControlName="accountNumber" matInput placeholder="40000" />
+      <mat-icon matSuffix>account_balance_wallet</mat-icon>
+    </mat-form-field>
+
+    <div mat-dialog-actions class="div-transfer-btns">
+      <button mat-button (click)="onNoClick()" class="btn-transfer" id="cancel-btn">Cancel</button>
+      <button color="primary" [disabled]="associatedForm.invalid" mat-raised-button [mat-dialog-close]="associatedForm.value" class="btn-transfer" id="confirm-btn">Create associated</button>
+    </div>
+  </div>
+</form>

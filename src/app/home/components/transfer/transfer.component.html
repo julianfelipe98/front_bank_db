@@ -1,0 +1,21 @@
+<h1 class="transfer-title" mat-dialog-title>Transfer money</h1>
+<hr>
+<form class="form-user-register">
+  <div class="data-form">
+    <mat-form-field appearance="fill">
+      <mat-label>Amount</mat-label>
+      <input matInput placeholder="40000" [(ngModel)]="transferMoney.amount" name="amount"/>
+      <mat-icon matSuffix>savings</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Target Account</mat-label>
+      <input matInput placeholder="00501010" [(ngModel)]="transferMoney.account_number" name="account_number"/>
+      <mat-icon matSuffix>account_balance_wallet</mat-icon>
+    </mat-form-field>
+  </div>
+</form>
+<div mat-dialog-actions class="div-transfer-btns">
+    <button mat-button (click)="onNoClick()" class="btn-transfer" id="cancel-btn">Cancel</button>
+    <button mat-button [mat-dialog-close]="transferMoney" cdkFocusInitial class="btn-transfer" id="confirm-btn">Transfer</button>
+</div>
